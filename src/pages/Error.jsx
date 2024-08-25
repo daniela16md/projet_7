@@ -6,10 +6,9 @@ import Error4 from '../components/404'
 function Error() {
   return (
     <div>
-        <Header/>
-        <Error4/>
-        <Footer/>
-        
+      <Header/>
+      <Error4/>
+      <Footer/>
     </div>
   )
 }

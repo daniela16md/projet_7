@@ -1,16 +1,18 @@
 import React from 'react'
-import './Card.css'
-import imagecard from '../assets/images/card.png'
+import '../style/style.css'
+import Mypackage from '../mypackage.json'
+import Packagecard from './Packagecard'
 
 function Card() {
   return (
-   <article className='card'>
-        <img className='imgecard' src={imagecard} alt="" />
-        <img className='imgecard' src={imagecard} alt="" />
-        <img className='imgecard' src={imagecard} alt="" />
-        <img className='imgecard' src={imagecard} alt="" />
-        <img className='imgecard' src={imagecard} alt="" />
-        <img className='imgecard' src={imagecard} alt="" />
+   <article className='cards'>
+      <div className='cardscontent'>
+        {Mypackage.map(mypack => (
+          <Packagecard key={mypack.id}
+           mypack={mypack} 
+           />
+        ))}
+      </div>
    </article>
   )
 }

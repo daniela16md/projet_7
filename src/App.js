@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import './App.css'
 
 
 import Home from './pages/Home';
@@ -10,28 +11,29 @@ import Logements from './pages/Logement';
 function App() {
   return (
     <Router>
-      <nav>
-        <ul>
+      <nav className='appdiv'>
+        <ul className='navapp'>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/"  className='liapp'>Home</Link>
           </li>
           <li>
-            <Link to="/apropos">À Propos</Link>
+            <Link to="/logements"  className='liapp'>Logements</Link>
           </li>
           <li>
-            <Link to="/error">Error</Link>
+            <Link to="*"  className='liapp'>Error</Link>
           </li>
+         
           <li>
-            <Link to="/logements">Logements</Link>
+            <Link to="/apropos"  className='liapp'>À Propos</Link>
           </li>
         </ul>
       </nav>
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/apropos" element={<Apropos />} />
         <Route path="/logements" element={<Logements />} />
         <Route path="*" element={<Error />} />
+        <Route path="/apropos" element={<Apropos />} />
       </Routes>
     </Router>
   );

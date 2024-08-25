@@ -1,0 +1,26 @@
+.dropdownopendiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.ddodiv{
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    background-color: rgba(255, 96, 96, 1);
+    justify-content: space-between;
+    gap: 60px;
+    width: 70%;
+    color: white;
+    padding: 0 20px;
+    height: 54px ;
+}
+.imgddo {
+    height: 32px;
+    align-self: center;
+}
+
