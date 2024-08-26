@@ -1,0 +1,19 @@
+@import "./variables.scss";
+
+
+.footer{
+    background-color: $color-black;
+    text-align: center;
+    padding: 20px;
+    padding-inline: 20px;
+    @media (max-width: 767.99px) {
+        width: 100%;
+    }
+
+    .logofooter{
+        margin-bottom: 10px;
+    }
+    .footertext{
+        color:$color-none ;
+    }
+}

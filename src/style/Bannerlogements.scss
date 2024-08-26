@@ -1,0 +1,41 @@
+@import "./variables.scss";
+
+.bannerSlider {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+
+    .bannerSliderImg {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .bannerSliderTitle {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        color: $color-none ;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .bannerSliderControls {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+
+        .sliderarrow {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+    }
+}
+

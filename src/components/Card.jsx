@@ -1,5 +1,5 @@
 import React from 'react'
-import '../style/style.css'
+import '../style/Cards.css'
 import Mypackage from '../mypackage.json'
 import Packagecard from './Packagecard'
 

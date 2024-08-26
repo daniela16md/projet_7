@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import errorimg from '../assets/images/error.png';
-import '../style/style.css'
+import '../style/Error.css'
 
 function Error4() {
   return (

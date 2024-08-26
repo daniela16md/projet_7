@@ -1,6 +1,6 @@
 import React from 'react'
 import imgapropos from '../assets/images/sky.png'
-import '../style/style.css'
+import '../style/Bannerapropos.css'
 
 function Bannerapropos() {
   return (

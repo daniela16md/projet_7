@@ -1,0 +1,35 @@
+.dropdownopendiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+@media (max-width: 767.99px) {
+  .dropdownopendiv {
+    width: 100%;
+    padding: 20px;
+  }
+}
+.dropdownopendiv .ddodiv {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  background-color: #FF6060;
+  justify-content: space-between;
+  gap: 60px;
+  width: 70%;
+  color: #fff;
+  padding: 0 20px;
+  height: 54px;
+}
+@media (max-width: 767.99px) {
+  .dropdownopendiv .ddodiv {
+    width: 100%;
+  }
+}
+.dropdownopendiv .ddodiv .imgddo {
+  height: 32px;
+  align-self: center;
+}/*# sourceMappingURL=Dropdownopen.css.map */

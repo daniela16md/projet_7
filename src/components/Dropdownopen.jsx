@@ -1,5 +1,5 @@
 import React from 'react'
-import '../style/style.css'
+import '../style/Dropdownopen.css'
 import arrowup from '../assets/icons/arrow_uppng.png';
 
 function Dropdownopen() {

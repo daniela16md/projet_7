@@ -1,0 +1,21 @@
+@import "./variables.scss";
+
+.errordiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+
+    .errorp {
+    color:$color-corail;
+    font-size: 36px;
+    font-weight: 500;
+    }
+    .errorlink {
+        font-size: 18px;
+        color: $color-black
+    }
+}

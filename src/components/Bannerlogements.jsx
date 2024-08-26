@@ -1,5 +1,5 @@
 import React from 'react';
-import '../style/style.css';
+import '../style/Bannerlogements.css';
 import arrowL from "../assets/icons/arrow_left.png";
 import arrowR from "../assets/icons/arrow_right.png";
 import Mypackage from '../mypackage.json';

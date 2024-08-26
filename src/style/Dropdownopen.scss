@@ -1,0 +1,36 @@
+@import "./variables.scss";
+
+.dropdownopendiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 40px;
+    @media (max-width: 767.99px) {
+        width: 100%;
+        padding:20px;
+    }
+
+
+    .ddodiv{
+        display: flex;
+        flex-direction: row;
+        box-sizing: border-box;
+        background-color: $color-corail ;
+        justify-content: space-between;
+        gap: 60px;
+        width: 70%;
+        color: $color-none ;
+        padding: 0 20px;
+        height: 54px ;
+        @media (max-width: 767.99px) {
+            width: 100%;
+        }
+    
+        .imgddo {
+            height: 32px;
+            align-self: center;
+        }
+    }
+}

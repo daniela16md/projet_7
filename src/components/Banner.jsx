@@ -1,6 +1,6 @@
 import React from 'react'
 import image from '../assets/images/water.png'
-import '../style/style.css'
+import '../style/Banner.css'
 
 function Banner() {
   return (

@@ -1,0 +1,48 @@
+@import "./variables.scss";
+
+.banner {
+    height: 223px;
+    width: 95%;
+    position: relative;
+    margin-bottom: 43px;
+    left: 3%;
+  }
+  @media (max-width: 767.99px) {
+    .banner {
+      height: 111px;
+      margin-bottom: 22px;
+      width: 100%;
+    }
+  }
+  .banner .bannerimg {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    filter: brightness(0.7);
+  }
+  @media (max-width: 767.99px) {
+    .banner .bannerimg {
+      border-radius: 10px;
+      margin-left: 10px;
+    }
+  }
+  .banner .bannerh1 {
+    position: absolute;
+    width: 100%;
+    top: 30%;
+    font-size: 48px;
+    font-weight: 500;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+  }
+  @media (max-width: 767.99px) {
+    .banner .bannerh1 {
+      font-size: 24px;
+      transform: translate(0, -50%);
+      margin-left: 15px;
+    }
+}
+  

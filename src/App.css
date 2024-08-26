@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: row;
   color: black;
-  display: none;
 }
 .appdiv .navapp {
   display: flex;
