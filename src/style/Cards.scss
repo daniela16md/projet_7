@@ -8,8 +8,11 @@
     margin-bottom: 40px;
     border-radius: 20px;
     position: relative;
-    left:3%;
     overflow: scroll;
+    left:3%;
+    @media (max-width: 1024px) {
+        width:90%;
+    }
     @media (max-width: 767.99px) {
         width: 93%;
         padding:20px;
@@ -22,8 +25,11 @@
         flex-direction: row;
         flex-wrap: wrap;  
         gap:45px;
+        @media (max-width: 1024px) {
+           gap:40px;
+        }
         @media (max-width: 767.99px) {
-        gap:20px
+        gap:40px;
     }
     }
 }
