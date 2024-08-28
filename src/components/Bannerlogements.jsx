@@ -2,45 +2,46 @@ import React from 'react';
 import '../style/Bannerlogements.css';
 import arrowL from "../assets/icons/arrow_left.png";
 import arrowR from "../assets/icons/arrow_right.png";
-import Mypackage from '../mypackage.json';
+
 import { useState } from 'react';
+
 import Stars from '../components/Stars'
 
 import arrowup from '../assets/icons/arrow_uppng.png'
 
 
-function Bannerlogements() {
+function Bannerlogements({logement}) {
     
-
+    
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    const handleLeftClick = () => {
-        setCurrentIndex(currentIndex === 0 ? Mypackage.length - 1 : currentIndex - 1);
+    const LeftClick = () => {
+        setCurrentIndex(currentIndex === 0 ? logement.pictures.length - 1 : currentIndex - 1);
     };
 
-    const handleRightClick = () => {
-        setCurrentIndex(currentIndex === Mypackage.length - 1 ? 0 : currentIndex + 1);
+    const RightClick = () => {
+        setCurrentIndex(currentIndex === logement.pictures.length - 1 ? 0 : currentIndex + 1);
     };
-
+  
     return (
         <div className='logement'>
             <div className='bannerSlider'>
                 
                 <img 
                     className='bannerSliderImg' 
-                    src={Mypackage[currentIndex].cover} 
-                    alt={Mypackage[currentIndex].title} 
+                    src={logement.pictures[currentIndex]} 
+                    alt={logement.pictures[currentIndex].title} 
                 />
                 
                 <div className='bannerSliderArrow'>
                     <img 
-                        onClick={handleLeftClick}
+                        onClick={LeftClick}
                         className="sliderArrow arrowLeft"
                         src={arrowL}
                         alt="Précédente"
                     />
                     <img 
-                        onClick={handleRightClick}
+                        onClick={RightClick}
                         className="sliderArrow arrowRight"
                         src={arrowR}
                         alt="Suivante"
@@ -51,19 +52,19 @@ function Bannerlogements() {
             <div className='logementinfos'>
                 <div className='titlediv'>
                     <div className='tittleh2p'>
-                        <h2 className='titleh2'>{Mypackage[currentIndex].title}</h2>
-                        <p className='tittlep'>{Mypackage[currentIndex].location}</p>
+                        <h2 className='titleh2'>{logement.title}</h2>
+                        <p className='tittlep'>{logement.location}</p>
                     </div>
                     
                     <div className='asideround'>
-                    <p className='asideroundp'>{Mypackage[currentIndex].host.name} </p>
-                        <img className='asideroundimg' src={Mypackage[currentIndex].host.picture}alt="" />
+                    <p className='asideroundp'>{logement.host.name} </p>
+                        <img className='asideroundimg' src={logement.host.picture}alt="" />
                     </div>
                 </div>
                 <div className='infos'>
                    
                     <ul className='infosdatas'>
-                        {Mypackage[currentIndex].tags.map((tag, index) => (
+                        {logement.tags.map((tag, index) => (
                             <li className='data' key={index}>
                                 {tag}
                             </li>
@@ -71,7 +72,7 @@ function Bannerlogements() {
                     </ul>
                 
                     <div className='asidestars'>
-                        < Stars star={Mypackage[currentIndex].rating} maxstar={5} />
+                        < Stars star={logement.rating} maxstar={5} />
                     </div>
                     
                 </div>
@@ -81,7 +82,7 @@ function Bannerlogements() {
                             <p>Description</p>
                             <img className='descriptionimg' src={arrowup} alt="" />
                         </div>
-                        <p className='descriptionp'>{Mypackage[currentIndex].description}</p>
+                        <p className='descriptionp'>{logement.description}</p>
                     </div>
                 
                     <div className='descdiv'>
@@ -89,7 +90,7 @@ function Bannerlogements() {
                             <p>Èquipement</p>
                             <img className='descriptionimg' src={arrowup} alt="" />
                         </div>
-                        <p className='descriptionp'>{Mypackage[currentIndex].equipments.map((equipment, index) => (
+                        <p className='descriptionp'>{logement.equipments.map((equipment, index) => (
                             <li className='li' key={index}>
                                 {equipment}
                             </li> ))}

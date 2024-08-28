@@ -61,7 +61,6 @@
 
 .logementinfos {
   padding-left: 3%;
-  margin-bottom: 40px;
 }
 .logementinfos .titlediv {
   width: 90%;
@@ -77,6 +76,11 @@
   font-weight: 500;
   line-height: 51.34px;
   text-align: left;
+}
+@media (max-width: 767.99px) {
+  .logementinfos .titlediv .tittleh2p .titleh2 {
+    font-size: 18px;
+  }
 }
 .logementinfos .titlediv .tittleh2p .titlep {
   font-size: 18px;
@@ -112,6 +116,7 @@
   display: flex;
   justify-content: space-between;
   width: 95%;
+  margin-bottom: 30px;
 }
 .logementinfos .infos .infosdatas {
   display: flex;
@@ -127,16 +132,33 @@
   font-size: 16px;
   color: #fff;
 }
+@media (max-width: 767.99px) {
+  .logementinfos .infos .infosdatas .data {
+    font-size: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
 .logementinfos .descriptionequipement {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 95%;
 }
+@media (max-width: 767.99px) {
+  .logementinfos .descriptionequipement {
+    flex-direction: column;
+  }
+}
 .logementinfos .descriptionequipement .descdiv {
   display: flex;
   flex-direction: column;
   width: 45%;
+}
+@media (max-width: 767.99px) {
+  .logementinfos .descriptionequipement .descdiv {
+    width: 100%;
+  }
 }
 .logementinfos .descriptionequipement .descdiv .description {
   display: flex;
@@ -153,11 +175,18 @@
   height: 32px;
   margin-top: 10px;
 }
+@media (max-width: 767.99px) {
+  .logementinfos .descriptionequipement .descdiv .description .descriptionimg {
+    width: 16px;
+    height: 16px;
+  }
+}
 .logementinfos .descriptionequipement .descdiv .descriptionp {
   box-sizing: border-box;
   background-color: #F7F7F7;
   margin-top: 0;
   padding: 10px;
+  margin-bottom: 30px;
 }
 .logementinfos .descriptionequipement .descdiv .descriptionp .li {
   list-style-type: none;
