@@ -7,9 +7,9 @@ function Card() {
   return (
    <article className='cards'>
       <div className='cardscontent'>
-        {Mypackage.map(mypack => (
-          <Packagecard key={mypack.id}
-           mypack={mypack} 
+        {Mypackage.map(Mypackage => (
+          <Packagecard key={Mypackage.id}
+           Mypackage={Mypackage} 
            />
         ))}
       </div>

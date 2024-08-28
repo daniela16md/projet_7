@@ -1,66 +1,5 @@
-@import "./variables.scss";
+@import './variables.scss';
 
-
-.bannerSlider {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 415px;
-    position: relative;
-
-    @media (max-width : 767.99px) {
-        height: 255px;
-    }
-    .bannerSliderImg {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        object-fit: cover;
-        object-position: center;
-        border-radius: 25px;
-
-        @media (max-width : 767.99px) {
-            border-radius: 10px;
-        }
-    }
-    .bannerSliderTitle {
-        position: absolute;
-        bottom: 20px;
-        left: 20px;
-        color: $color-corail ;
-        padding: 10px;
-        border-radius: 5px;
-        font-size: 36px;
-        font-weight: 500;
-    }
-
-    .bannerSliderArrow {
-        position: absolute;
-        top: 50%;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        transform: translateY(-50%);
-
-        .sliderarrow {
-            position: absolute;
-            cursor: pointer;
-            height: 80px;
-    
-            @media (max-width : 767.99px) {
-                height: 24px;
-            }
-        }
-        .arrowleft{
-            color: black;
-            position:relative;
-        }
-        
-    }
-}
 .logementinfos {
     padding-left: 3%;
     margin-bottom: 40px;
@@ -96,11 +35,9 @@
             height: 64px;
             width: 120px;
             gap: 20px;
-            margin-top: 30px;
-            .asideroundimg{
+            .img{
                 width: 64px;
                 height: 64px;
-                border-radius: 50%;
             }
             .asideroundp{
                 color: $color-corail;
@@ -121,12 +58,11 @@
     .infos{
         display: flex;
         justify-content: space-between;
-        width: 95%;
+    width: 95%;
         .infosdatas{
             display: flex;
             flex-direction: row;
             gap: 20px;
-            padding-left: 0;
             .data{
                 box-sizing: border-box;
                 background-color: $color-corail;
@@ -168,9 +104,6 @@
                 background-color: $color-grey;
                 margin-top: 0;
                 padding: 10px;
-                .li{
-                    list-style-type: none;
-                }
             }
         }
         .dropdownp{
@@ -182,60 +115,4 @@
 .hidden{
     display: none;
 }
-
-.dropdownopendiv{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    margin-bottom: 40px;
-    @media (max-width: 767.99px) {
-        width: 100%;
-        padding:20px;
-    }
-
-    .dropddiv{
-        width: 70% ;
-        background-color: $color-grey;
-        @media (max-width: 767.99px) {
-            width: 100%;
-        }
-        .p{
-            padding: 20px;
-        }
-        .ddodiv{
-            display: flex;
-            flex-direction: row;
-            box-sizing: border-box;
-            background-color: $color-corail ;
-            justify-content: space-between;
-            gap: 60px;
-            width: 100%;
-            color: $color-none ;
-            padding: 0 20px;
-            height: 54px ;
-            @media (max-width: 767.99px) {
-                width: 100%;
-            }
-        
-            .imgddo {
-                height: 32px;
-                align-self: center;
-              
-            }
-            .imgdown{
-                height: 32px;
-                align-self: center;
-            }
-        }
-       .dropdownp{
-        padding: 0 20px ;
-        }
-    }
-}
-.hidden{
-    display: none;
-}
-
 

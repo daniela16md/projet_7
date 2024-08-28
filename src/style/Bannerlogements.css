@@ -1,25 +1,42 @@
 .bannerSlider {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-  overflow: hidden;
+  height: 415px;
+  position: relative;
+}
+@media (max-width: 767.99px) {
+  .bannerSlider {
+    height: 255px;
+  }
 }
 .bannerSlider .bannerSliderImg {
+  position: absolute;
   width: 100%;
-  height: auto;
-  display: block;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 25px;
+}
+@media (max-width: 767.99px) {
+  .bannerSlider .bannerSliderImg {
+    border-radius: 10px;
+  }
 }
 .bannerSlider .bannerSliderTitle {
   position: absolute;
   bottom: 20px;
   left: 20px;
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.5);
+  color: #FF6060;
   padding: 10px;
   border-radius: 5px;
+  font-size: 36px;
+  font-weight: 500;
 }
-.bannerSlider .bannerSliderControls {
+.bannerSlider .bannerSliderArrow {
   position: absolute;
   top: 50%;
   width: 100%;
@@ -27,8 +44,187 @@
   justify-content: space-between;
   transform: translateY(-50%);
 }
-.bannerSlider .bannerSliderControls .sliderarrow {
-  width: 30px;
-  height: 30px;
+.bannerSlider .bannerSliderArrow .sliderarrow {
+  position: absolute;
   cursor: pointer;
+  height: 80px;
+}
+@media (max-width: 767.99px) {
+  .bannerSlider .bannerSliderArrow .sliderarrow {
+    height: 24px;
+  }
+}
+.bannerSlider .bannerSliderArrow .arrowleft {
+  color: black;
+  position: relative;
+}
+
+.logementinfos {
+  padding-left: 3%;
+  margin-bottom: 40px;
+}
+.logementinfos .titlediv {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+.logementinfos .titlediv .tittleh2p {
+  gap: 0;
+}
+.logementinfos .titlediv .tittleh2p .titleh2 {
+  color: #FF6060;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 51.34px;
+  text-align: left;
+}
+.logementinfos .titlediv .tittleh2p .titlep {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25.67px;
+  text-align: left;
+}
+.logementinfos .titlediv .asideround {
+  display: flex;
+  flex-direction: row;
+  height: 64px;
+  width: 120px;
+  gap: 20px;
+  margin-top: 30px;
+}
+.logementinfos .titlediv .asideround .asideroundimg {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+.logementinfos .titlediv .asideround .asideroundp {
+  color: #FF6060;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-weight: 500;
+  font-size: 18px;
+}
+.logementinfos .titlediv .asideround .asideroundp .span {
+  margin-left: 15px;
+}
+.logementinfos .infos {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+}
+.logementinfos .infos .infosdatas {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding-left: 0;
+}
+.logementinfos .infos .infosdatas .data {
+  box-sizing: border-box;
+  background-color: #FF6060;
+  border-radius: 10px;
+  padding: 2px 20px;
+  font-size: 16px;
+  color: #fff;
+}
+.logementinfos .descriptionequipement {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 95%;
+}
+.logementinfos .descriptionequipement .descdiv {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+.logementinfos .descriptionequipement .descdiv .description {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background-color: #FF6060;
+  border-radius: 10px;
+  color: #fff;
+  width: 100%;
+  padding: 0 10px;
+}
+.logementinfos .descriptionequipement .descdiv .description .descriptionimg {
+  width: 32px;
+  height: 32px;
+  margin-top: 10px;
+}
+.logementinfos .descriptionequipement .descdiv .descriptionp {
+  box-sizing: border-box;
+  background-color: #F7F7F7;
+  margin-top: 0;
+  padding: 10px;
+}
+.logementinfos .descriptionequipement .descdiv .descriptionp .li {
+  list-style-type: none;
+}
+.logementinfos .descriptionequipement .dropdownp {
+  padding: 0 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.dropdownopendiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+@media (max-width: 767.99px) {
+  .dropdownopendiv {
+    width: 100%;
+    padding: 20px;
+  }
+}
+.dropdownopendiv .dropddiv {
+  width: 70%;
+  background-color: #F7F7F7;
+}
+@media (max-width: 767.99px) {
+  .dropdownopendiv .dropddiv {
+    width: 100%;
+  }
+}
+.dropdownopendiv .dropddiv .p {
+  padding: 20px;
+}
+.dropdownopendiv .dropddiv .ddodiv {
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  background-color: #FF6060;
+  justify-content: space-between;
+  gap: 60px;
+  width: 100%;
+  color: #fff;
+  padding: 0 20px;
+  height: 54px;
+}
+@media (max-width: 767.99px) {
+  .dropdownopendiv .dropddiv .ddodiv {
+    width: 100%;
+  }
+}
+.dropdownopendiv .dropddiv .ddodiv .imgddo {
+  height: 32px;
+  align-self: center;
+}
+.dropdownopendiv .dropddiv .ddodiv .imgdown {
+  height: 32px;
+  align-self: center;
+}
+.dropdownopendiv .dropddiv .dropdownp {
+  padding: 0 20px;
+}
+
+.hidden {
+  display: none;
 }/*# sourceMappingURL=Bannerlogements.css.map */

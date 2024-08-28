@@ -1,0 +1,18 @@
+.star {
+  padding-left: 4px;
+  font-size: 26px;
+}
+@media (max-width: 767.99px) {
+  .star {
+    font-size: 14px;
+    padding-right: 2px;
+  }
+}
+
+.full {
+  color: #FF6060;
+}
+
+.empty {
+  color: #fff;
+}/*# sourceMappingURL=Stars.css.map */

@@ -1,13 +1,17 @@
 import React from 'react'
 import '../style/Packagecard.css'
+import { Link } from 'react-router-dom'
 
 
-function Packagecard({mypack}) {
+
+function Packagecard({Mypackage}) {
   return (
-    <article className="card">
-      <img className='cardimg' src={mypack.cover} alt={mypack.title} />
-      <h2 className='cardh2'>{mypack.title}</h2>
-    </article>
+    <Link to={"./logement" + Mypackage.id}>
+      <article className="card">
+        <img className='cardimg' src={Mypackage.cover} alt={Mypackage.title} />
+        <h2 className='cardh2'>{Mypackage.title}</h2>
+      </article>
+    </Link>
   )
 } console.log(Packagecard);
 
