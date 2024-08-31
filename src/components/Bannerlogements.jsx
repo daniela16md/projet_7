@@ -1,13 +1,12 @@
 import React from 'react';
 import '../style/Bannerlogements.css';
-import arrowL from "../assets/icons/arrow_left.png";
-import arrowR from "../assets/icons/arrow_right.png";
-
+import '../style/Dropdownopen.css';
+import { MdOutlineArrowBackIosNew } from 'react-icons/md';
 import { useState } from 'react';
-
 import Stars from '../components/Stars'
 
-import arrowup from '../assets/icons/arrow_uppng.png'
+import Mypackage from '../mypackage.json'
+
 
 
 function Bannerlogements({logement}) {
@@ -22,10 +21,20 @@ function Bannerlogements({logement}) {
     const RightClick = () => {
         setCurrentIndex(currentIndex === logement.pictures.length - 1 ? 0 : currentIndex + 1);
     };
+
+    const {  equipments } = logement;
+
+    const [openIndex, setOpenIndex] = useState(null);
+
+    // Fonction pour gérer le clic sur le titre ou les icônes.
+    const toggleDropdown = (index) => {
+        // Si la section cliquée est déjà ouverte, on la ferme. Sinon, on l'ouvre.
+        setOpenIndex(openIndex === index ? null : index);
+    };
   
     return (
         <div className='logement'>
-            <div className='bannerSlider'>
+            <section className='bannerSlider'>
                 
                 <img 
                     className='bannerSliderImg' 
@@ -34,72 +43,77 @@ function Bannerlogements({logement}) {
                 />
                 
                 <div className='bannerSliderArrow'>
-                    <img 
-                        onClick={LeftClick}
-                        className="sliderArrow arrowLeft"
-                        src={arrowL}
-                        alt="Précédente"
-                    />
-                    <img 
-                        onClick={RightClick}
-                        className="sliderArrow arrowRight"
-                        src={arrowR}
-                        alt="Suivante"
-                    />
+                    <MdOutlineArrowBackIosNew className='slideArrow arrowLeft' onClick={LeftClick} />
+                    <MdOutlineArrowBackIosNew className='slideArrow arrowRight' onClick={RightClick} />
                 </div>
+                <p className='bannerCount'>{currentIndex + 1} / {logement.pictures.length}</p>
                 
-            </div>
-            <div className='logementinfos'>
+            </section>
+            <section className='logementsinfos'>
+            
                 <div className='titlediv'>
                     <div className='tittleh2p'>
                         <h2 className='titleh2'>{logement.title}</h2>
                         <p className='tittlep'>{logement.location}</p>
                     </div>
-                    
-                    <div className='asideround'>
-                    <p className='asideroundp'>{logement.host.name} </p>
-                        <img className='asideroundimg' src={logement.host.picture}alt="" />
+                    <div className='infostags'>
+                        <ul className='infostagsul'>
+                            {logement.tags.map((tag, index) => (
+                                <li className='infostagsli' key={index}>
+                                    {tag}
+                                </li>
+                            ))}
+                        </ul>
                     </div>
+                    
                 </div>
-                <div className='infos'>
-                   
-                    <ul className='infosdatas'>
-                        {logement.tags.map((tag, index) => (
-                            <li className='data' key={index}>
-                                {tag}
-                            </li>
-                        ))}
-                    </ul>
-                
+
+                <div className='infosaside'>
+                    <div className='asideround'>
+                        <p className='asideroundp'>{logement.host.name} </p>
+                            <img className='asideroundimg' src={logement.host.picture}alt="" />
+                    </div>
+                    
                     <div className='asidestars'>
                         < Stars star={logement.rating} maxstar={5} />
                     </div>
-                    
+                        
                 </div>
-                <div className='descriptionequipement'>
-                    <div className='descdiv'>
-                        <div className='description'>
-                            <p>Description</p>
-                            <img className='descriptionimg' src={arrowup} alt="" />
-                        </div>
-                        <p className='descriptionp'>{logement.description}</p>
-                    </div>
                 
-                    <div className='descdiv'>
-                        <div className='description'>
-                            <p>Èquipement</p>
-                            <img className='descriptionimg' src={arrowup} alt="" />
-                        </div>
-                        <p className='descriptionp'>{logement.equipments.map((equipment, index) => (
-                            <li className='li' key={index}>
-                                {equipment}
-                            </li> ))}
-                        </p>
-                       
-                    </div>
-                </div>
+            </section>
 
-            </div>
+            <section className="descriptionequipement">
+
+                <div className='dropdownopendiv'>
+                    {Mypackage.map((index) => (
+                        <div key={index} className='dropddiv'>
+                            <div className='ddodiv' onClick={() => toggleDropdown(index)}>
+                                <h2>description</h2>
+                                <MdOutlineArrowBackIosNew className={`arrow ${openIndex === index ? '' : 'arrowdown'}`} />
+                            </div>
+                            {openIndex === index && <p className='dropdownp'>{logement.description}</p>} 
+                                            
+                        </div>
+                    ))}
+                </div>
+                <div className='dropdownopendiv'>
+                    {Mypackage.map((index) => (
+                        <div key={index} className='dropddiv'>
+                            <div className='ddodiv' onClick={() => toggleDropdown(index)}>
+                                <h2>Equipement</h2>
+                                <MdOutlineArrowBackIosNew className={`arrow ${openIndex === index ? '' : 'arrowdown'}`} />
+                            </div>
+                            {openIndex === index && <ul className='dropdownp'>{equipments.map((equipment, index) => (
+                        <li className="description-item" key={index}>
+                            {equipment}
+                        </li>
+                        ))}</ul>} 
+                                            
+                        </div>
+                    ))}
+                </div>
+                
+            </section>
             
         </div>
             

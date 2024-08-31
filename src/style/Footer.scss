@@ -6,6 +6,7 @@
     text-align: center;
     padding: 20px;
     padding-inline: 20px;
+    width: 100%;
    
     .logofooter{
         margin-bottom: 10px;
@@ -13,8 +14,5 @@
     .footertext{
         color:$color-none ;
     }
-    @media (max-width: 767.99px) {
-        width: 100%;
-       
-    }
+    
 }

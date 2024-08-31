@@ -1,39 +1,23 @@
-import React from 'react'
-import { useState } from 'react';
-import arrowup from '../assets/icons/arrow_uppng.png'
-import arrowdown from '../assets/icons/arrow_uppng.png'
+import React, { useState } from 'react';
+import '../style/Dropdownopen.css';
+import { MdOutlineArrowBackIosNew } from 'react-icons/md';
 
-function Collapse(item, index) {
-    const [openIndex, setOpenIndex] = useState(null);
+function Collapse({ title, children }) {
+    const [isOpen, setIsOpen] = useState(false);
 
-    // Fonction pour gérer le clic sur le titre ou les icônes.
-    const toggleDropdown = (index) => {
-        // Si la section cliquée est déjà ouverte, on la ferme. Sinon, on l'ouvre.
-        setOpenIndex(openIndex === index ? null : index);
+    const toggleCollapse = () => {
+        setIsOpen(!isOpen);
     };
+
     return (
-        <div className='dropdownopendiv'>
-    
-            <div className='ddodiv' onClick={() => toggleDropdown(index)}>
-                <h2>{index.title}</h2>
-                <img 
-                    className={`imgddo ${openIndex === index ? '' : 'hidden'}`} 
-                    src={arrowup} 
-                    alt="arrow up"
-                />
-                <img 
-                    className={`imgdown ${openIndex !== index ? '' : 'hidden'}`} 
-                    src={arrowdown} 
-                    alt="arrow down"
-                />
+        <div className='dropddiv'>
+            <div className='ddodiv' onClick={toggleCollapse}>
+                <h2>{title}</h2>
+                <MdOutlineArrowBackIosNew className={`arrow ${isOpen ? '' : 'arrowdown'}`} />
             </div>
-            {openIndex === index && <p className='dropdownp'>{item.text}</p>}
+            {isOpen  && <div className='dropdownp' >{children}</div>}
         </div>
-        
-       
     );
-    
-   
 }
 
-export default Collapse
+export default Collapse;

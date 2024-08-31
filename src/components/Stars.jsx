@@ -1,20 +1,24 @@
 import React from 'react'
 import '../style/Stars.css'
+import greystar from '../assets/icons/start-grey.png'
+import redstar from '../assets/icons/start_red.png'
 
-function Stars(star, maxstar) {
+function Stars({star, maxstar}) {
  
     const starsnumber = [];
-    for (let i = 1; i <= maxstar; i++) {
-        const starClass = i <= star ? 'full' : 'empty';
-        starsnumber.push
-            (<i key={i} className={`fa-solid fa-star star ${starClass}`}></i>)
-    }
-    return (
-        <div className="rating">
-            {starsnumber}
-        </div>
+   
+  for (let i = 1; i <= maxstar; i++) {
+    const starClass = i <= star ? redstar : greystar;
+    starsnumber.push(
+      <img key={i} className="star" src={starClass} alt="star" /> 
     );
+  }
+  return (
+    <div className="rating">
+      {starsnumber}
+    </div>
+  );
   
-};
+}; 
 
 export default Stars

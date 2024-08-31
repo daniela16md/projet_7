@@ -1,0 +1,32 @@
+@import '../style/variables.scss';
+
+.collapse-container {
+    margin-bottom: 10px;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+  
+    .collapse-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      padding: 10px;
+      background-color: $color-corail;
+  
+      .collapse-icon {
+        width: $icon-size;
+        height: $icon-size;
+        transition: transform 0.2s;
+  
+        &.hidden {
+          display: none;
+        }
+      }
+    }
+  
+    .collapse-content {
+      padding: 10px;
+      border-top: 1px solid $border-color;
+      background-color: $content-background-color;
+    }
+  }

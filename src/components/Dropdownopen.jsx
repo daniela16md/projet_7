@@ -1,17 +1,14 @@
 import React, { useState } from 'react';
 import '../style/Dropdownopen.css';
-import arrowup from '../assets/icons/arrow_uppng.png';
-import arrowdown from '../assets/icons/arrrow_downpng.png';
+
+import { MdOutlineArrowBackIosNew } from 'react-icons/md';
 
 function Dropdownopen() {
     // Utilisation de l'état pour suivre quelle section est ouverte.
     const [openIndex, setOpenIndex] = useState(null);
 
     // Fonction pour gérer le clic sur le titre ou les icônes.
-    const toggleDropdown = (index) => {
-        // Si la section cliquée est déjà ouverte, on la ferme. Sinon, on l'ouvre.
-        setOpenIndex(openIndex === index ? null : index);
-    };
+    
 
     // Données pour chaque section.
     const dropdownData = [
@@ -37,20 +34,13 @@ function Dropdownopen() {
         <div className='dropdownopendiv'>
             {dropdownData.map((item, index) => (
                 <div key={index} className='dropddiv'>
-                    <div className='ddodiv' onClick={() => toggleDropdown(index)}>
+                    <div className='ddodiv' onClick={() => setOpenIndex(index)}>
                         <h2>{item.title}</h2>
-                        <img 
-                            className={`imgddo ${openIndex === index ? '' : 'hidden'}`} 
-                            src={arrowup} 
-                            alt="arrow up"
-                        />
-                        <img 
-                            className={`imgdown ${openIndex !== index ? '' : 'hidden'}`} 
-                            src={arrowdown} 
-                            alt="arrow down"
-                        />
+                        <MdOutlineArrowBackIosNew className={`arrow ${openIndex === index ? '' : 'arrowdown'}`} />
+                        
                     </div>
-                    {openIndex === index && <p className='dropdownp'>{item.text}</p>}
+                    {openIndex === index && <p className='dropdownp'>{item.text}</p>} 
+                                     
                 </div>
             ))}
         </div>

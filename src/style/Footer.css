@@ -3,15 +3,11 @@
   text-align: center;
   padding: 20px;
   padding-inline: 20px;
+  width: 100%;
 }
 .footer .logofooter {
   margin-bottom: 10px;
 }
 .footer .footertext {
   color: #fff;
-}
-@media (max-width: 767.99px) {
-  .footer {
-    width: 100%;
-  }
 }/*# sourceMappingURL=Footer.css.map */
