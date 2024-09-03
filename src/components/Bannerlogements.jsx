@@ -5,13 +5,8 @@ import { MdOutlineArrowBackIosNew } from 'react-icons/md';
 import { useState } from 'react';
 import Stars from '../components/Stars'
 
-import Mypackage from '../mypackage.json'
-
-
-
 function Bannerlogements({logement}) {
-    
-    
+       
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const LeftClick = () => {
@@ -22,11 +17,8 @@ function Bannerlogements({logement}) {
         setCurrentIndex(currentIndex === logement.pictures.length - 1 ? 0 : currentIndex + 1);
     };
 
-    const {  equipments } = logement;
-
     const [openIndex, setOpenIndex] = useState(null);
 
-    // Fonction pour gérer le clic sur le titre ou les icônes.
     const toggleDropdown = (index) => {
         // Si la section cliquée est déjà ouverte, on la ferme. Sinon, on l'ouvre.
         setOpenIndex(openIndex === index ? null : index);
@@ -84,34 +76,17 @@ function Bannerlogements({logement}) {
 
             <section className="descriptionequipement">
 
-                <div className='dropdownopendiv'>
-                    {Mypackage.map((index) => (
-                        <div key={index} className='dropddiv'>
-                            <div className='ddodiv' onClick={() => toggleDropdown(index)}>
-                                <h2>description</h2>
-                                <MdOutlineArrowBackIosNew className={`arrow ${openIndex === index ? '' : 'arrowdown'}`} />
-                            </div>
-                            {openIndex === index && <p className='dropdownp'>{logement.description}</p>} 
-                                            
+            <div className='dropdownopendiv'>
+                {[{title: "Description", content: logement.description}, {title: "Equipement", content: logement.equipments.map((equipment, index) => <li key={index}>{equipment}</li>)}].map((section, index) => (
+                    <div key={index} className='dropddiv'>
+                        <div className='ddodiv' onClick={() => toggleDropdown(index)}>
+                            <h2>{section.title}</h2>
+                            <MdOutlineArrowBackIosNew className={`arrow ${openIndex === index ? '' : 'arrowdown'}`} />
                         </div>
-                    ))}
-                </div>
-                <div className='dropdownopendiv'>
-                    {Mypackage.map((index) => (
-                        <div key={index} className='dropddiv'>
-                            <div className='ddodiv' onClick={() => toggleDropdown(index)}>
-                                <h2>Equipement</h2>
-                                <MdOutlineArrowBackIosNew className={`arrow ${openIndex === index ? '' : 'arrowdown'}`} />
-                            </div>
-                            {openIndex === index && <ul className='dropdownp'>{equipments.map((equipment, index) => (
-                        <li className="description-item" key={index}>
-                            {equipment}
-                        </li>
-                        ))}</ul>} 
-                                            
-                        </div>
-                    ))}
-                </div>
+                        {openIndex === index && <div className='dropdownp'>{typeof section.content === 'string' ? <p>{section.content}</p> : <ul>{section.content}</ul>}</div>}
+                    </div>
+                ))}
+            </div>
                 
             </section>
             

@@ -5,28 +5,29 @@
     border: 1px solid $border-color;
     border-radius: $border-radius;
   
-    .collapse-header {
+    .collapsediv {
       display: flex;
       align-items: center;
       justify-content: space-between;
       cursor: pointer;
       padding: 10px;
       background-color: $color-corail;
-  
-      .collapse-icon {
-        width: $icon-size;
-        height: $icon-size;
-        transition: transform 0.2s;
-  
-        &.hidden {
-          display: none;
-        }
+
+      .arrow{ 
+        height:32px;
+        align-self: center;
+        transform: rotate(90deg);
+      } 
+   
+      .arrowdown{
+        height:32px;
+        align-self: center;
+        transform: rotate(-90deg);
       }
     }
   
     .collapse-content {
       padding: 10px;
-      border-top: 1px solid $border-color;
-      background-color: $content-background-color;
+      background-color: $color-grey;
     }
   }

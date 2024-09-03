@@ -6,6 +6,7 @@ import { useParams,Navigate } from 'react-router-dom'
 import Mypackage from '../mypackage.json'
 
 
+
 function Logement() {
   const { id } = useParams()
   const logement = Mypackage.find((logement) => logement.id === id)
@@ -14,7 +15,7 @@ function Logement() {
   console.log(logement);
 
   return (
-    <div>
+    <div className='pagecontent' >
       <Header/>
       <Bannerlogements logement={logement}/>
       <Footer/>

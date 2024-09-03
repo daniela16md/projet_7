@@ -1,36 +1,27 @@
 @import "./variables.scss";
 
-.cards {
-    background-color: $color-grey;
-    gap: 20px;
-    width: 90%;
-    padding: 30px;
-    margin-bottom: 40px;
-    border-radius: 20px;
-    position: relative;
-    overflow: scroll;
+.cardcontent {
+    width: 95%;
     left:3%;
-    @media (max-width: 1024px) {
-        width:90%;
-    }
-    @media (max-width: 767.99px) {
-        width: 93%;
-        padding:20px;
-    }
-   
-
-    .cardscontent {
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;  
-        gap:45px;
-        @media (max-width: 1024px) {
-           gap:40px;
-        }
-        @media (max-width: 767.99px) {
-        gap:40px;
-    }
+    position: relative;
+    border-radius: 25px;
+    background-color: $color-grey;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 50px;
+    padding: 50px;
+    margin-bottom: 40px;
+    @media (max-width : 767.99px) {
+        background-color: white;
+        padding: 0;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        width: 90%;
+        left: 5%;
+        
     }
 }
+   
+
 

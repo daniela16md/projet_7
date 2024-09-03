@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 95%;
   left: 3%;
   height: 415px;
   position: relative;
@@ -224,21 +224,26 @@
 
 .descriptionequipement {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  width: 100%;
+  width: 97%;
+  padding-left: 3%;
 }
 @media (max-width: 767.99px) {
   .descriptionequipement {
-    flex-direction: column;
+    width: 100%;
+    padding-left: 0;
   }
 }
 .descriptionequipement .dropdownopendiv {
-  width: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 @media (max-width: 767.99px) {
   .descriptionequipement .dropdownopendiv {
     width: 100%;
+    flex-direction: column;
   }
 }
 .descriptionequipement .dropdownopendiv .descdiv {

@@ -1,13 +1,7 @@
 .card {
-  width: 30%;
   position: relative;
-  /*background: $color-corail ;*/
+  height: 100%;
   margin-bottom: 20px;
-}
-@media (max-width: 1024px) {
-  .card {
-    width: 29%;
-  }
 }
 @media (max-width: 767.99px) {
   .card {
@@ -19,6 +13,7 @@
   height: 100%;
   object-fit: cover;
   cursor: pointer;
+  border-radius: 10px;
 }
 .card .cardimg:hover {
   transform: scale(1.1);
@@ -29,7 +24,7 @@
   font-size: 18px;
   left: 20px;
   bottom: -1px;
-  width: 60%;
+  width: 90%;
   text-align: left;
   z-index: 1;
   font-weight: 700;

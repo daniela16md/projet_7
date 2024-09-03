@@ -1,19 +1,17 @@
 import React from 'react'
 import '../style/Cards.css'
 import Mypackage from '../mypackage.json'
-import Packagecard from './Packagecard'
+import Packagecard from '../components/Packagecard'
 
 function Card() {
   return (
-   <article className='cards'>
-      <div className='cardscontent'>
-        {Mypackage.map(Mypackage => (
-          <Packagecard key={Mypackage.id}
-           Mypackage={Mypackage} 
-           />
-        ))}
-      </div>
-   </article>
+    <section className='cardcontent'>  
+      {Mypackage.map(Mypackage => (
+        <Packagecard key={Mypackage.id}
+          Mypackage={Mypackage} 
+          />
+      ))} 
+    </section>
   )
 }
 

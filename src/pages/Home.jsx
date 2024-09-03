@@ -8,7 +8,7 @@ import Card from '../components/Card';
 
 function Home() {
   return (
-    <div >
+    <div className='pagecontent' >
       <Header/>
       <Banner/>
       <Card/>

@@ -5,10 +5,6 @@ import star from '../assets/icons/start_red.png'
 import '../style/Logementtinfos.css'
 import arrowup from '../assets/icons/arrow_uppng.png'
 
-
-
-
-
 function Logementinfos() {
    
   return (

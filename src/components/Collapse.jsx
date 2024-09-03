@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../style/Dropdownopen.css';
+import '../style/Collapse.css';
 import { MdOutlineArrowBackIosNew } from 'react-icons/md';
 
 function Collapse({ title, children }) {
@@ -10,12 +10,12 @@ function Collapse({ title, children }) {
     };
 
     return (
-        <div className='dropddiv'>
-            <div className='ddodiv' onClick={toggleCollapse}>
+        <div className='collpase'>
+            <div className='collpasediv' onClick={toggleCollapse}>
                 <h2>{title}</h2>
                 <MdOutlineArrowBackIosNew className={`arrow ${isOpen ? '' : 'arrowdown'}`} />
             </div>
-            {isOpen  && <div className='dropdownp' >{children}</div>}
+            {isOpen  && <div className='collpasecontent' >{children}</div>}
         </div>
     );
 }

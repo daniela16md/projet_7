@@ -5,7 +5,7 @@ import Error4 from '../components/404'
 
 function Error() {
   return (
-    <div>
+    <div className='pagecontent'>
       <Header/>
       <Error4/>
       <Footer/>

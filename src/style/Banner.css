@@ -9,7 +9,7 @@
   .banner {
     height: 111px;
     margin-bottom: 22px;
-    width: 100%;
+    width: 90%;
   }
 }
 .banner .bannerimg {
@@ -28,20 +28,21 @@
 }
 .banner .bannerh1 {
   position: absolute;
-  width: 80%;
   padding: 30px;
-  top: 30%;
+  top: 10%;
   font-size: 48px;
   font-weight: 500;
   color: #fff;
   display: flex;
-  justify-content: center;
+  flex-wrap: nowrap;
+  left: 10%;
 }
 @media (max-width: 767.99px) {
   .banner .bannerh1 {
     font-size: 24px;
-    transform: translate(0, -50%);
-    margin-left: 15px;
-    top: 10%;
+    padding-left: 20px;
+    flex-wrap: wrap;
+    top: -10%;
+    left: 5%;
   }
 }/*# sourceMappingURL=Banner.css.map */

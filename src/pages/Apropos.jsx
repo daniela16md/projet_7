@@ -6,7 +6,7 @@ import Dropdownopen from '../components/Dropdownopen'
 
 function Apropos() {
   return (
-    <div>
+    <div className='pagecontent'>
       <Header/>
       <Bannerapropos/>
       <Dropdownopen/>
