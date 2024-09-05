@@ -1,15 +1,17 @@
 import React from 'react'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import Bannerapropos from '../components/Bannerapropos'
-import Dropdownopen from '../components/Dropdownopen'
+import Header from '../components/Header/Header'
+import Footer from '../components/Footer/Footer'
+import Bannerapropos from '../components/Bannerapropos/Bannerapropos'
+import Dropdownopen from '../components/Dropdownpen/Dropdownopen'
 
 function Apropos() {
   return (
     <div className='pagecontent'>
-      <Header/>
-      <Bannerapropos/>
-      <Dropdownopen/>
+      <div className=' pagediv'>
+        <Header/>
+        <Bannerapropos/>
+        <Dropdownopen/>
+      </div>
       <Footer/>
     </div>
   )

@@ -1,9 +1,9 @@
 import React from 'react'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import Bannerlogements from '../components/Bannerlogements'
+import Header from '../components/Header/Header'
+import Footer from '../components/Footer/Footer'
+import Bannerlogements from '../components/Bannerlogements/Bannerlogements'
 import { useParams,Navigate } from 'react-router-dom'
-import Mypackage from '../mypackage.json'
+import Mypackage from '../components/Card/mypackage.json'
 
 
 
@@ -16,8 +16,10 @@ function Logement() {
 
   return (
     <div className='pagecontent' >
-      <Header/>
-      <Bannerlogements logement={logement}/>
+      <div className='pagediv'>
+        <Header/>
+        <Bannerlogements logement={logement}/>
+      </div>
       <Footer/>
     </div>
   )

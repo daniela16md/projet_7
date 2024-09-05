@@ -1,0 +1,23 @@
+@import "../assets/variables/variables.scss";
+
+.cardcontent {
+    position: relative;
+    border-radius: 25px;
+    background-color: $color-grey;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 50px;
+    padding: 50px;
+    margin-bottom: 40px;
+    @media (max-width : 767.99px) {
+        background-color: $color-none;
+        padding: 0;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        
+    }
+}
+   
+
+

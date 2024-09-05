@@ -1,0 +1,19 @@
+.cardcontent {
+  position: relative;
+  border-radius: 25px;
+  background-color: #F7F7F7;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 50px;
+  padding: 50px;
+  margin-bottom: 40px;
+}
+@media (max-width: 767.99px) {
+  .cardcontent {
+    background-color: #fff;
+    padding: 0;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}/*# sourceMappingURL=Cards.css.map */
