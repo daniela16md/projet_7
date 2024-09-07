@@ -1,4 +1,4 @@
-.dropdownopendiv {
+.aproposdivdiv {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,11 +8,11 @@
   width: 100%;
 }
 @media (max-width: 767.99px) {
-  .dropdownopendiv {
+  .aproposdivdiv {
     width: 100%;
   }
 }
-.dropdownopendiv .description-content {
+.aproposdivdiv .description-content {
   display: block;
   padding: 0 20px;
   background-color: #F7F7F7;
@@ -33,4 +33,4 @@
   from {
     transform: translateY(-100%);
   }
-}/*# sourceMappingURL=Dropdownopen.css.map */
+}/*# sourceMappingURL=Aproposdiv.css.map */

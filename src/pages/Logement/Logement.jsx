@@ -1,9 +1,11 @@
 import React from 'react'
-import Header from '../components/Header/Header'
-import Footer from '../components/Footer/Footer'
-import Bannerlogements from '../components/Bannerlogements/Bannerlogements'
+import Header from '../../components/Header/Header'
+import Footer from '../../components/Footer/Footer'
+import Carrousel from '../../components/Carrousel/Carousel'
 import { useParams,Navigate } from 'react-router-dom'
-import Mypackage from '../components/Card/mypackage.json'
+import Mypackage from '../../Card/mypackage.json'
+import Logementsinfos from '../../components/Logementsinfos/Logementsinfos'
+
 
 
 
@@ -18,7 +20,8 @@ function Logement() {
     <div className='pagecontent' >
       <div className='pagediv'>
         <Header/>
-        <Bannerlogements logement={logement}/>
+        <Carrousel logement={logement}/>
+        <Logementsinfos logement={logement}/>
       </div>
       <Footer/>
     </div>

@@ -1,7 +1,7 @@
 import React from 'react'
 import './Stars.css'
-import greystar from '../assets/icons/start-grey.png'
-import redstar from '../assets/icons/start_red.png'
+import greystar from '../../assets/icons/start-grey.png'
+import redstar from '../../assets/icons/start_red.png'
 
 function Stars({star, maxstar}) {
  

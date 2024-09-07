@@ -1,10 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css'
-import Home from './pages/Home';
-import Apropos from './pages/Apropos';
-import Error from './pages/Error';
-import Logements from './pages/Logement';
+import Home from './pages/Home/Home';
+import Apropos from './pages/Apropos/Apropos';
+import Logements from './pages/Logement/Logement';
+import Error from './pages/Error/Error';
+
 
 function App() {
   return (
