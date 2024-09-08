@@ -1,28 +1,28 @@
-@import '../src/assets/variables/variables.scss';
-
+@import '../assets/variables';
+@import '../assets/mixins';
 
 .body,
 html {
-    width: 100%;
+    width: $size100;
     height: auto;
     margin: 0;
     padding:0;
     
 }
-
+.li, ul {
+    list-style-type: none;
+}
 #root{
-    width: 100%;
+    width: $size100;
     margin:0;
 }
 .appdiv{
-    display: flex;
-    flex-direction: row;
+    @include flex-row;
     color: $color-black;
     display: none;
 
     .navapp{
-        display: flex;
-        flex-direction: row;
+        @include flex-row;
         gap: 30px;
         list-style-type:none;
     

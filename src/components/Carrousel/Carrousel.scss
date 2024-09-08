@@ -1,11 +1,8 @@
-@import "../../assets/variables/variables.scss";
-
+@import "../../assets/variables";
+@import "../../assets/mixins";
 
 .bannerSlider {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @include display-column;
     height: 415px;
     position: relative;
    
@@ -16,10 +13,10 @@
     
     .bannerSliderImg {
         position: absolute;
-        width: 100%;
-        height: 100%;
+        width: $size100;
+        height: $size100;
         z-index: -1;
-        object-fit: cover;
+        @include cover;
         object-position: center;
         border-radius: 25px;
 
@@ -41,7 +38,7 @@
     .bannerSliderArrow {
         position: absolute;
         top: 50%;
-        width: 100%;
+        width: $size100;
         display: flex;
         justify-content: space-between;
         transform: translateY(-50%);

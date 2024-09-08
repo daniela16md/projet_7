@@ -1,78 +1,37 @@
-@import '../../assets/variables/variables.scss';
-
+@import '../../assets/variables';
+@import "../../assets/mixins";
 .collapse {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+  @include display-column;
+  width: $size100;
   overflow: hidden;
-
   .collapsediv {
-    width: 100%;
-    overflow: hidden;
+    width: $size100;
     background-color: $color-corail;
-    display: flex;
-    flex-direction: row;
+    @include flex-row;
     justify-content: space-between;
     color: $color-none;
     padding: 0 20px;
     border-radius: 10px;
 
     @media (max-width: 767.99px) {
-      width: 100%;
+      width: $size100;
     }
 
     .arrow { 
-      height: 32px;
-      align-self: center;
+      @include arrrow;
       transform: rotate(90deg);
     } 
 
     .arrowdown {
-      height: 32px;
-      align-self: center;
+      @include arrrow;
       transform: rotate(-90deg);
     }
+  }
 
-    .collapsecontent {
-      display: block;
-      padding: 0 20px;
-      background-color: $color-grey;
-      padding-bottom: 20px;
-      padding-top: 30px;
-      top: -30px;
-      z-index: -1;
-      position: relative;
-      animation: slide-down 0.7s ease-in-out;
-      color: black;
-      width: 100%;
-
-      .dropdownp {
-        display: block;
-        padding: 0 20px;
-        background-color: $color-grey;
-        padding-bottom: 20px;
-        padding-top: 30px;
-        top: -30px;
-        z-index: -1;
-        position: relative;
-        animation: slide-down 0.7s ease-in-out;
-        color: black;
-      }
-
-      .dropupp {
-        padding: 0 20px;
-        background-color: $color-grey;
-        padding-bottom: 20px;
-        padding-top: 30px;
-        top: -30px;
-        z-index: -1;
-        position: relative;
-        animation: slide-up 0.7s ease-in-out;
-        color: black;
-      }
-    }
+  .collapsecontent {
+    @include content-down;
+    width: $size100;
+   
   }
 
   .hidden {
@@ -90,11 +49,6 @@
   }
 }
 
-@keyframes slide-up {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(-100%);
-  }
-}
+
+
+

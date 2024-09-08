@@ -1,4 +1,4 @@
-@import "../../assets/variables/variables.scss";
+@import "../../assets/variables";
 
 
 .footer{
@@ -6,7 +6,7 @@
     text-align: center;
     padding: 20px;
     padding-inline: 20px;
-    width: 100%;
+    width: $size100;
    
     .logofooter{
         margin-bottom: 10px;

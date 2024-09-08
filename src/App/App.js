@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import './App.css'
-import Home from './pages/Home/Home';
-import Apropos from './pages/Apropos/Apropos';
-import Logements from './pages/Logement/Logement';
-import Error from './pages/Error/Error';
+import Home from '../pages/Home/Home';
+import Apropos from '../pages/Apropos/Apropos';
+import Logements from '../pages/Logement/Logement';
+import Error from '../pages/Error/Error';
 
 
 function App() {

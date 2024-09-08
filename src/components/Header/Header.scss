@@ -1,9 +1,9 @@
-@import "../../assets/variables/variables.scss";
+@import "../../assets/variables";
+@import "../../assets/mixins";
 
 .header { 
     margin-top: 45px;
-    display: flex;
-    justify-content: space-between;
+    @include flex-space;
     height: 68px;
     align-items: center;
     margin-bottom: 20px;

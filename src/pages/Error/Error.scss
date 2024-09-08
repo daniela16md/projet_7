@@ -1,10 +1,8 @@
-@import "../../assets/variables/variables.scss";
+@import "../../assets/variables";
+@import "../../assets/mixins";
 
 .errordiv {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+   @include display-column;
     gap: 40px;
     margin-bottom: 50px;
     margin-top: 50px;

@@ -1,0 +1,39 @@
+@mixin display-column{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+@mixin column-space {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+@mixin flex-row{
+    display: flex;
+    flex-direction: row;
+}
+@mixin flex-space{
+    display: flex;
+    justify-content: space-between;
+}
+@mixin cover {
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+@mixin arrrow {
+    height: 32px;
+    align-self: center;
+    transition: transform 0.3s ease-in-out;
+}
+@mixin content-down{
+    display: block;
+    padding: 0 20px ;
+    background-color: $color-grey;
+    padding-top: 40px;
+    top:-30px;
+    z-index:-1;
+    position: relative;
+    animation: slide-down 0.7s ease-in-out;
+    color: black;
+}
