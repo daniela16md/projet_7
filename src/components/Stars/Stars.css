@@ -1,10 +1,9 @@
 .star {
   padding-left: 4px;
-  font-size: 26px;
+  width: 20%;
 }
 @media (max-width: 767.99px) {
   .star {
-    font-size: 14px;
     padding-right: 2px;
   }
 }

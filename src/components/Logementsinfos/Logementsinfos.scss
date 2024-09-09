@@ -69,18 +69,24 @@
     }
     .infosaside{
        max-width: 30%;
+       position: absolute;
+       right: 5%;
        @media (max-width : 767.99px) {
+            position: relative;
+            right: 1%;
             max-width: $size100;
            @include flex-space;
             flex-direction: row-reverse;
-           
             margin-top: 8px;
             margin-bottom: 20px;
         }
         .asideround{
            @include flex-row;
-            padding-top: 4px;
-        
+            padding-top: 25px;
+            padding-left: 20%;
+            @media (max-width: 767.99px) {
+                padding: 0 ;
+            }
             .asideroundimg{
                 width: 64px;
                 height: 64px;

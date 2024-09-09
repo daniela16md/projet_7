@@ -10,7 +10,6 @@
   .header {
     margin-top: 20px;
     height: 47px;
-    padding-right: 20px;
   }
 }
 .header .headerlogo {
@@ -19,9 +18,8 @@
 }
 @media (max-width: 767.99px) {
   .header .headerlogo {
-    width: 40%;
-    height: 47px;
-    margin-left: 15px;
+    width: 30%;
+    height: 40px;
   }
 }
 .header .headerlist {
