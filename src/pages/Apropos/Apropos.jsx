@@ -5,9 +5,19 @@ import Banner from '../../components/Banner/Banner'
 import imgsky from '../../assets/images/sky.webp'
 import Collapse from '../../components/Collapse/Collapse'
 import '../Apropos/Aproposdiv.css'
-
+import { useState, useEffect } from 'react'
+import Loader from '../../components/Laoder/Loader'
 
 function Apropos() {
+  const [loading, setLoading] = useState(true)
+    useEffect(()=> {
+
+    setTimeout(() => {
+      setLoading(false)
+    }, 3000);
+
+  }, [])
+
   const dropdownData = [
     {
       title: "Fiabilité",
@@ -28,23 +38,29 @@ function Apropos() {
   ];
 
   return (
+   
     <div className='pagecontent'>
       <div className=' pagediv'>
         <Header/>
         <Banner image={imgsky}/>
-
         <div className='aproposdiv'>
+          
           {dropdownData.map((item, index) => (
+            loading ? (
+              <Loader/>
+            ) : (
             <Collapse key={index} title={item.title}>
               <p className='description-content'>{item.text}</p> 
             </Collapse>
+            )
           ))}
         </div>
-       
+      
       </div>
       <Footer/>
     </div>
   )
+
 }
 
 export default Apropos

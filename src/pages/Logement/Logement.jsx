@@ -10,6 +10,7 @@ import Logementsinfos from '../../components/Logementsinfos/Logementsinfos'
 
 
 function Logement() {
+
   const { id } = useParams()
   const logement = Mypackage.find((logement) => logement.id === id)
   if (!logement ) { return <Navigate to="404" /> }
@@ -20,8 +21,11 @@ function Logement() {
     <div className='pagecontent' >
       <div className='pagediv'>
         <Header/>
+      
         <Carrousel logement={logement}/>
+        
         <Logementsinfos logement={logement}/>
+        
       </div>
       <Footer/>
     </div>

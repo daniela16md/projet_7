@@ -8,25 +8,25 @@ import Packagecard from '../../components/Packagecard/Packagecard'
 import './Cards.css'
 
 
-function Home() {
-  return (
-    <div className='pagecontent' >
-      <div className='pagediv'>
-      <Header/>
-      <Banner image={imgwater} text="Chez vous, partout et ailleurs" />
 
-        <section className='cardcontent'>  
-          {Mypackage.map(Mypackage => (
-            <Packagecard key={Mypackage.id}
-              Mypackage={Mypackage} 
-              />
-          ))} 
-        </section>
-      
-      </div>
-      <Footer/>
+function Home() {
+ 
+
+  return (
+    
+   <div className='pagecontent'>
+    <div className='pagediv'>
+      <Header />
+      <Banner image={imgwater} text="Chez vous, partout et ailleurs" />
+      <section className='cardcontent'>
+        {Mypackage.map((item) => (
+          <Packagecard key={item.id} Mypackage={item} />
+        ))}
+      </section>
     </div>
+    <Footer />
+    
+  </div>
   );
 }
-
 export default Home

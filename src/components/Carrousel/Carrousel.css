@@ -1,3 +1,7 @@
+.loaderspin {
+  padding-left: 30%;
+}
+
 .bannerSlider {
   display: flex;
   flex-direction: column;

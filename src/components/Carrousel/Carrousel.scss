@@ -1,6 +1,9 @@
 @import "../../assets/variables";
 @import "../../assets/mixins";
 
+.loaderspin{
+   padding-left: 30%;
+}
 .bannerSlider {
     @include display-column;
     height: 415px;
