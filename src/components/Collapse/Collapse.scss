@@ -1,5 +1,6 @@
 @import '../../assets/variables';
 @import "../../assets/mixins";
+
 .collapse {
   @include display-column;
   width: $size100;
@@ -12,33 +13,26 @@
     color: $color-none;
     padding: 0 20px;
     border-radius: 10px;
-
     @media (max-width: 767.99px) {
       width: $size100;
     }
-
     .arrow { 
       @include arrrow;
       transform: rotate(90deg);
     } 
-
     .arrowdown {
       @include arrrow;
       transform: rotate(-90deg);
     }
   }
-
   .collapsecontent {
     @include content-down;
     width: $size100;
-   
   }
-
   .hidden {
     display: none;
   }
 }
-
 
 @keyframes slide-down {
   from {

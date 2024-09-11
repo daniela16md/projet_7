@@ -9,14 +9,12 @@
     height: 111px;
     margin-bottom: 22px;
   }
-
   .bannerimg {
     width: $size100;
     height: $size100;
     border-radius: 25px;
     @include cover;
     filter: brightness(0.7);
-  
     @media (max-width: 767.99px) {
       border-radius: 10px;
     }
@@ -31,7 +29,6 @@
     display: flex;
     flex-wrap: nowrap;
     left:10%;
-    
     @media (max-width: 767.99px) {
       font-size: 24px;
       padding-left: 20px;

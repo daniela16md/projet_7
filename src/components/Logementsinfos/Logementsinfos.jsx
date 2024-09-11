@@ -21,7 +21,6 @@ function Logementsinfos({logement}) {
                         ))}
                     </ul>
                 </div>
-                
             </div>
 
             <div className='infosaside'>
@@ -29,7 +28,6 @@ function Logementsinfos({logement}) {
                     <p className='asideroundp'>{logement.host.name} </p>
                         <img className='asideroundimg' src={logement.host.picture}alt="" />
                 </div>
-                
                 <div className='asidestars'>
                     < Stars star={logement.rating} maxstar={5} />
                 </div>

@@ -1,7 +1,6 @@
 @import "../../assets/variables";
 @import "../../assets/mixins";
 
-
 .card{
     position: relative;
     height: $size100;
@@ -10,7 +9,6 @@
         width: $size100;
         height: 250px;
     }
-  
     .cardimg{
         width: $size100;
         height: $size100;
@@ -36,7 +34,6 @@
             font-size: 16px;
         }
         @media (max-width: 767.99px) {
-      
         font-size: 16px;
         }
     }
