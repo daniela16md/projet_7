@@ -27,11 +27,17 @@
   padding: 30px;
   top: 10%;
   font-size: 48px;
-  font-weight: 500;
+  font-weight: 700;
   color: #fff;
   display: flex;
   flex-wrap: nowrap;
   left: 10%;
+}
+@media (max-width: 1024px) {
+  .banner .bannerh1 {
+    font-size: 40px;
+    left: 7%;
+  }
 }
 @media (max-width: 767.99px) {
   .banner .bannerh1 {
@@ -39,6 +45,6 @@
     padding-left: 20px;
     flex-wrap: wrap;
     top: -10%;
-    left: 5%;
+    left: 0;
   }
 }/*# sourceMappingURL=Banner.css.map */

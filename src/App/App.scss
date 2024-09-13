@@ -16,10 +16,12 @@ html {
     width: $size100;
     margin:0;
 }
+
 .appdiv{
     @include flex-row;
     color: $color-black;
     display: none;
+    padding: 0 20%;
 
     .navapp{
         @include flex-row;

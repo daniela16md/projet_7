@@ -35,14 +35,15 @@
 }
 .collapse .collapsecontent {
   display: block;
-  padding: 0 20px;
+  padding: 0 10px;
   background-color: #F7F7F7;
-  padding-top: 40px;
+  padding-top: 30px;
   top: -30px;
   z-index: -1;
   position: relative;
   animation: slide-down 0.7s ease-in-out;
   color: black;
+  margin-bottom: 0;
   width: 100%;
 }
 .collapse .hidden {

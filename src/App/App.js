@@ -6,7 +6,6 @@ import Apropos from '../pages/Apropos/Apropos';
 import Logements from '../pages/Logement/Logement';
 import Error from '../pages/Error/Error';
 
-
 function App() {
   return (
     <Router>
@@ -27,14 +26,17 @@ function App() {
           </li>
         </ul>
       </nav>
-
+       
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/logement/:id" element={<Logements />} />
         <Route path="*" element={<Error />} />
         <Route path="/apropos" element={<Apropos />} />
       </Routes>
+      
     </Router>
+
+
   );
 }
 
